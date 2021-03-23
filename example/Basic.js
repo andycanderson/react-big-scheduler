@@ -2,12 +2,16 @@ import React, {Component} from 'react'
 import {PropTypes} from 'prop-types' 
 //import moment from 'moment'
 //import 'moment/locale/zh-cn';
-// import 'antd/lib/style/index.less';     //Add this code for locally example
 import Scheduler, {SchedulerData, ViewTypes, DATE_FORMAT, DemoData} from '../src/index'
 import Nav from './Nav'
 import Tips from './Tips'
 import ViewSrcCode from './ViewSrcCode'
-import withDragDropContext from './withDnDContext'
+// import withDragDropContext from './withDnDContext'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+import { DndProvider } from 'react-dnd';
+// import 'antd/lib/style/index.less';     //Add this code for locally example
+import 'antd/dist/antd.less';
+
 
 class Basic extends Component{
     constructor(props){
@@ -26,7 +30,7 @@ class Basic extends Component{
     render(){
         const {viewModel} = this.state;
         return (
-            <div>
+            <DndProvider backend={HTML5Backend}>
                 <Nav />
                 <div>
                     <h3 style={{textAlign: 'center'}}>Basic example<ViewSrcCode srcCodeUrl="https://github.com/StephenChou1017/react-big-scheduler/blob/master/example/Basic.js" /></h3>
@@ -52,7 +56,7 @@ class Basic extends Component{
                     />
                 </div>
                 <Tips />
-            </div>
+            </DndProvider>
         )
     }
 
@@ -191,4 +195,4 @@ class Basic extends Component{
     }
 }
 
-export default withDragDropContext(Basic)
+export default Basic;

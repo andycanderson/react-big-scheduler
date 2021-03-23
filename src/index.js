@@ -24,17 +24,16 @@ import {PropTypes} from 'prop-types'
 // The next components have their own specific stylesheets which we import
 // separately here to avoid importing from files which have required the global
 // antd styles.
-import Col from 'antd/lib/col'
-import Row from 'antd/lib/row'
-import Icon from 'antd/lib/icon'
+// import Col from 'antd/lib/col'
+// import Row from 'antd/lib/row'
 import 'antd/lib/select/style/index.css'
 import 'antd/lib/grid/style/index.css'
-import Radio from 'antd/lib/radio'
-import 'antd/lib/radio/style/index.css'
-import Popover from 'antd/lib/popover'
-import 'antd/lib/popover/style/index.css'
-import Calendar from 'antd/lib/calendar'
-import 'antd/lib/calendar/style/index.css'
+// import Radio from 'antd/lib/radio'
+// import 'antd/lib/radio/style/index.css'
+// import Popover from 'antd/lib/popover'
+// import 'antd/lib/popover/style/index.css'
+// import Calendar from 'antd/lib/calendar'
+// import 'antd/lib/calendar/style/index.css'
 import EventItem from './EventItem'
 import DnDSource from './DnDSource'
 import DnDContext from './DnDContext'
@@ -51,6 +50,9 @@ import SchedulerData from './SchedulerData'
 import DemoData from './DemoData'
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
+
+import { Col, Row, Radio, Popover, Calendar } from 'antd';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
 class Scheduler extends Component {
 
@@ -282,7 +284,7 @@ class Scheduler extends Component {
                     {leftCustomHeader}
                     <Col>
                         <div className='header2-text'>
-                            <Icon type="left" style={{marginRight: "8px"}} className="icon-nav"
+                            <LeftOutlined style={{marginRight: "8px"}} className="icon-nav"
                                     onClick={this.goBack}/>
                             {
                             calendarPopoverEnabled
@@ -294,7 +296,7 @@ class Scheduler extends Component {
                                 </Popover>
                                 : <span className={'header2-text-label'}>{dateLabel}</span>
                             }
-                            <Icon type="right" style={{marginLeft: "8px"}} className="icon-nav"
+                            <RightOutlined type="right" style={{marginLeft: "8px"}} className="icon-nav"
                                     onClick={this.goNext}/>
                         </div>
                     </Col>

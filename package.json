@@ -40,15 +40,24 @@
   "pre-commit": [
     "lint"
   ],
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.1.0",
+    "antd": "^4.14.0",
+    "moment": "^2.29.1",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0"
+  },
   "dependencies": {
-    "antd": "^3.16.6",
+    "antd": "^4.14.1",
     "cpy": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dnd": "^7.5.0",
-    "react-dnd-html5-backend": "^7.5.0",
-    "react-dom": "^16.8.6",
+    "react": "^17.0.2",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0",
+    "react-dom": "^17.0.2",
     "rrule": "^2.6.0"
   },
   "devDependencies": {
